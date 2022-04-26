@@ -9,15 +9,16 @@ Version      : 1.0
 [Table of contents]
 
 1. Common
-2. Header
-3. Slider
-4. Category
-5. Buy Get
-6. Deals of Week
-7. Brands
-8. Ads Block
-9. Icon Block
-10. Footer / #footer
+2. Owl Carousal Animation
+3. Header
+4. Slider
+5. Category
+6. Buy Get
+7. Deals of Week
+8. Brands
+9. Ads Block
+10. Icon Block
+11. Footer / #footer
 -------------------------------------------------------------------*/
 
 /* 1. Common Start */
@@ -39,7 +40,7 @@ Version      : 1.0
         text-decoration: none;
     }
     .section-padding {
-        padding: 30px 0;
+        padding: 50px 0;
     }
     .text-right{
         text-align: right;
@@ -66,9 +67,72 @@ Version      : 1.0
     .text-btn:hover {
         color: var(--themecolor);
     }
-/* 1. Common End */
+/* 1. Common End */ 
+/* 2. Owl Carousal Animation*/
 
-/* 2. Header Start */  
+
+/* Feel free to change duration  */ 
+.animated  {
+    -webkit-animation-duration : 1000 ms  ;
+    animation-duration : 1000 ms  ;
+    -webkit-animation-fill-mode : both  ;
+    animation-fill-mode : both  ;
+  }  
+  /* .owl-animated-out - only for current item */ 
+  /* This is very important class. Use z-index if you want move Out item above In item */ 
+  .owl-animated-out {
+    z-index : 1 
+     }
+  /* .owl-animated-in - only for upcoming item
+  /* This is very important class. Use z-index if you want move In item above Out item */ 
+  .owl-animated-in {
+    z-index : 0 
+     }
+  /* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */ 
+  .fadeOut  {
+    -webkit-animation-name : fadeOut  ;
+    animation-name : fadeOut  ;
+  }  
+  @-webkit-keyframes  fadeOut  {
+    0% {
+      opacity : 1   ;
+    }  
+    100% {
+      opacity : 0   ;
+    }  
+  }
+  @keyframes  fadeOut  {
+    0% {
+      opacity : 1   ;
+    }  
+    100% {
+      opacity : 0   ;
+    }  
+  }
+  
+  .single-hero .owl-item.active .hero-content h2 { 
+    animation: fadeInLeftBig ease 1s both;
+  
+  } 
+  .single-hero .owl-item.active .hero-content span {
+     animation: fadeIn ease 1s 1s both;
+  } 
+  .single-hero  .owl-item.active .hero-content p {
+     animation: fadeInUpBig ease 1s 1s both;
+  } 
+  .single-hero  .owl-item.active .hero-content a {
+     animation: fadeInLeft ease 1s 2s both;
+  } 
+  .single-hero .owl-item.active img {
+     animation: fadeInRight ease 1s 2s both;
+  }
+.owl-carousel img {
+        display: block;
+        width: auto !important;
+    }
+/*2. Owl Carousal Animation*/ 
+
+/* 3. Header Start */  
     header {
     padding: 20px 0;
     }
@@ -185,4 +249,121 @@ Version      : 1.0
     .nav-menu ul li:first-child {
         padding-left: 0;
     }
-/* 2. Header Start */
+/* 3. Header End */
+
+/* 4. Slider Start */
+
+  .hero-slider {
+    height: 500px;
+  }
+  .single-hero {
+    background-color: #EBFAEB;
+    padding: 100px 0;
+  }
+  .hero-content span {
+    font-size: 30px;
+    color: var(--themecolor);
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .hero-content h2 {
+    font-size: 54px;
+    font-weight: 700; 
+  }
+  .theme-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--themecolor);
+    color: #fff;
+    transition: 0.4s;
+    font-weight: 700;
+    transition: 0.4s;
+  }
+  .theme-btn:hover {
+    background-color: var(--secendcolor);
+    color: #fff;
+  }
+  .theme-btn.border-btn {
+    border-radius: 25px;
+  }
+  
+  .single-hero {
+    position: relative;
+  }
+  .single-hero img {
+    position: absolute;
+    height: 460px;
+    bottom: 0;
+    right: 150px;
+  }
+  .single-hero.bg-slide h2, .single-hero.bg-slide p, .single-hero.bg-slide span {
+    color: #fff !important;
+  }
+  .single-hero.bg-slide {
+    background-size: cover;
+    background-position: center top;
+  }
+  .hero-slider .owl-dots {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-slider .owl-dot {
+    height: 3px;
+    width: 30px;
+    background-color: #064521 !important;
+    margin: 0 6px;
+  }
+  .hero-slider .owl-dot.active {
+    background-color: var(--themecolor) !important;
+  }
+/* 4. Slider End */
+/* 5. Category End */
+
+.section-title {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
+  .section-title:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    content: '';
+    padding-bottom: ;
+  }
+  .section-title::before {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 3px;
+    width: 60px;
+    content: '';
+    background-color: var(--themecolor);
+    z-index: 1;
+  }
+  .single-s-f-1 {
+    display: inline-block;
+    height: 150px;
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 13px;
+    transition: 0.4s;
+  }
+  .single-s-f-1 img {
+    margin: 0 auto;
+  }
+  .single-s-f-1 span {
+    color: var(--textcolor);
+    font-weight: 700;
+    display: inline-block;
+  }
+  .single-s-f-1:hover {
+    background-color: #EBFAEB;
+  }
+/* 5. Category End */
