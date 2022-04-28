@@ -32,6 +32,20 @@
       // autoplayTimeout: 3000,
       //  autoplaySpeed: 3000, 
   });
+  //  slide-feature-1
+    $('.slide-feature-2').owlCarousel({
+      items: 5,
+      margin: 30,
+      loop: true,
+      autoplay: false,
+      animateOut: 'fadeOut',
+      autoplayTimeout: 8000,
+      dots: false,
+      nav: true,
+      lazyLoad: true,
+      // autoplayTimeout: 3000,
+      //  autoplaySpeed: 3000, 
+  });
 
 
 })(jQuery);

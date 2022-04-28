@@ -13,7 +13,7 @@ Version      : 1.0
 3. Header
 4. Slider
 5. Category
-6. Buy Get
+6. Ads Block 1
 7. Deals of Week
 8. Brands
 9. Ads Block
@@ -66,6 +66,16 @@ Version      : 1.0
     
     .text-btn:hover {
         color: var(--themecolor);
+    }
+    .btn-white { 
+      background-color: #fff !important;
+      color: var(--secendcolor) !important;
+    }
+    .btn-border {
+      border: 1px solid !important;
+    }
+    .btn-border:hover {
+      border: transparent !important;
     }
 /* 1. Common End */ 
 /* 2. Owl Carousal Animation*/
@@ -126,10 +136,37 @@ Version      : 1.0
   .single-hero .owl-item.active img {
      animation: fadeInRight ease 1s 2s both;
   }
-.owl-carousel img {
+  .owl-carousel img {
         display: block;
         width: auto !important;
     }
+    
+  .slide-feature .owl-nav {
+    position: absolute;
+    top: -85px;
+    right: 0;
+  }
+  .slide-feature .owl-prev, .slide-feature .owl-next {
+    height: 50px;
+    width: 50px;
+    background-color: #F2F2F2 !important;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 12px;
+    transition: 0.4s;
+  }
+  .slide-feature .owl-prev span, .slide-feature .owl-next span {
+    font-size: 40px;
+    line-height: 0.6;
+    color: var(--textcolor);
+    transition: 0.4s;
+  }
+  .slide-feature .owl-prev:hover, .slide-feature .owl-next:hover {
+    background-color: var(--themecolor) !important;
+  }
+  .slide-feature .owl-prev:hover span, .slide-feature .owl-next:hover span {
+    color: #fff;
+  }
 /*2. Owl Carousal Animation*/ 
 
 /* 3. Header Start */  
@@ -280,8 +317,9 @@ Version      : 1.0
     transition: 0.4s;
   }
   .theme-btn:hover {
-    background-color: var(--secendcolor);
-    color: #fff;
+    background-color: var(--secendcolor) !important;
+    color: #fff !important;
+    
   }
   .theme-btn.border-btn {
     border-radius: 25px;
@@ -334,8 +372,7 @@ Version      : 1.0
     width: 100%;
     height: 1px;
     background-color: #ddd;
-    content: '';
-    padding-bottom: ;
+    content: ''; 
   }
   .section-title::before {
     position: absolute;
@@ -366,4 +403,167 @@ Version      : 1.0
   .single-s-f-1:hover {
     background-color: #EBFAEB;
   }
+  
+
 /* 5. Category End */
+/* 6. Ads Block 1 Start */
+
+.ad-block-1 {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.ad-block-wrap {
+  vertical-align: middle;
+  padding: 40px;
+}
+.ad-block-1 span {
+  color: var(--secendcolor);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.ad-block-1 h4 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 22px;
+} 
+.ad-block-1 {
+  position: relative;
+} 
+.ad-block-1 .ad-absulate-img {
+  position: absolute;
+  height: 50%;
+  right: 0;
+  top: 25%; 
+  right: 20px;
+}
+/* 6. Ads Block 1 End */
+/* 7. Deals of Week End */
+
+.fature-absulate {
+  position: relative;
+  height: 240px;
+  border-radius: 5px;
+}
+.discount {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--secendcolor);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.fature-absulate img {
+  height: 100%;
+  width: auto;
+  border-radius: 5px;
+}
+.qty {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  border-radius: 5px;
+  transition: 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+.qty .d-table-cell {
+  vertical-align: middle;
+}
+.qty:after {
+  position: absolute;
+  left: 0; 
+  top: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: #000;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.3;
+}
+ 
+.qty span {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding-top: 4px;
+  font-size: 17px;
+  color: #fff;
+}
+ 
+.qty .qty-value {
+  margin: 0px 11px;
+  background-color: #fff;
+  color: var(--themecolor) !important;
+  font-weight: 700;
+}
+.single-s-f-2 .feature-wrap {
+  text-align: center;
+  padding: 11px;
+}
+.single-s-f-2 .feature-wrap .p-name {
+  font-size: 17px;
+}
+.single-s-f-2 .feature-wrap a {
+  padding: 10px 20px;
+  margin-top: 9px;
+}
+.single-s-f-2 .feature-wrap .price {
+  font-weight: 700;
+}
+.single-s-f-2 .feature-wrap .price del {
+  font-weight: 500;
+  color: #959595;
+  font-size: 13px;
+} 
+.single-s-f-2:hover .qty {
+  visibility: visible;
+  opacity: 1;
+}
+/* 7. Deals of Week End */
+/* 8. brands End */
+.brands .single-s-f-1 {
+  height: auto !important;
+  background-color: transparent !important;
+}
+/* 8. brands of Week End */
+/* 9. Info Box */
+
+  .info-icon {
+    height: 70px;
+    width: 70px;
+    background-color: #EBFAEB;
+    text-align: center;
+    font-size: 34px;
+    color: #27AE60;
+    padding-top: 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .info-box {
+    display: flex;
+  }
+  .info-text h5 {
+    font-size: 16px;
+  }
+  .info-text {
+    padding-top: 9px;
+  }
+/* 9. Info Box End */
+
