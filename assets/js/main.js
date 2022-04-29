@@ -8,12 +8,13 @@
       items: 1,
       margin: 20,
       loop: true,
-      autoplay: true,
+      autoplay: false,
       animateOut: 'fadeOut',
       autoplayTimeout: 8000,
       dots: true,
       nav: false,
       lazyLoad: true,
+     
       // autoplayTimeout: 3000,
       //  autoplaySpeed: 3000, 
   });
@@ -29,6 +30,20 @@
       dots: false,
       nav: true,
       lazyLoad: true,
+      responsive: {
+        0: {
+            items: 1, 
+        },
+        600: {
+            items: 2, 
+        },
+        1000: {
+            items: 4, 
+        },
+        1200: {
+            items: 6, 
+        }
+      }
       // autoplayTimeout: 3000,
       //  autoplaySpeed: 3000, 
   });
@@ -43,9 +58,44 @@
       dots: false,
       nav: true,
       lazyLoad: true,
+      responsive: {
+        0: {
+            items: 1, 
+        },
+        600: {
+            items: 2, 
+        },
+        1000: {
+            items: 3, 
+        },
+        1200: {
+            items: 5, 
+        }
+      }
       // autoplayTimeout: 3000,
       //  autoplaySpeed: 3000, 
   });
 
+  // Sidebar Menu
+  $(".ctg-sidebar-menu li").click(function(){
+    // preventDefault();
+    $(".ctg-sidebar-menu li").toggleClass("active");
+  });
+
+  // Fixed Header
+  /* ----------------------------------------------------------- */
+      /*  Fixed header
+      /* ----------------------------------------------------------- */
+  
+      $(window).scroll(function () {
+        var window_top = $(window).scrollTop() + 1;
+        if (window_top > 50) {
+          $('#header').addClass('menu_fixed');
+        } else {
+          $('#header').removeClass('menu_fixed');
+        }
+      });
+    
+  
 
 })(jQuery);

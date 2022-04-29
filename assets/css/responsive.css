@@ -1,0 +1,154 @@
+@media (min-width: 992px) and (max-width: 1400px) {}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 1200px) {
+  .nav-menu ul li {
+    padding: 2px 9px !important;
+  }
+
+  .hero-slider {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .top-right-nav span {
+    height: 30px !important;
+    width: 30px !important;
+    padding-top: 2px !important;
+  }
+
+  .top-right-nav span img {
+    height: 20px;
+  }
+
+  .navbar.navbar-expand-lg.nav-menu {
+    display: none;
+  }
+
+  .top-right-nav {
+    padding: 10px 0;
+  }
+
+  .navbar-toggler {
+    float: right;
+  }
+
+  .single-hero {
+    padding: 30px;
+  }
+
+  .single-hero span {
+    font-size: 20px;
+  }
+
+  .single-hero h2 {
+    font-size: 30px;
+  }
+
+  .single-hero .img-fluid.hero-img {
+    display: none;
+  }
+
+  .fature-absulate img {
+    margin: 0 auto;
+  }
+
+  .fature-absulate {
+    background-color: #F9F9F9;
+  }
+
+  .ad-block-wrap h4 {
+    font-size: 22px;
+  }
+
+  .ad-block-1 {
+    margin-bottom: 25px;
+  }
+
+  .info-box {
+    margin-bottom: 25px;
+  }
+
+  .theme-btn {
+    padding: 8px 18px;
+  }
+
+  .product-bar .breadcumb,
+  .product-bar .bar-info {
+    float: left !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .page-info {
+    text-align: center;
+  }
+
+  .product-bar .bar-info {
+    margin-top: 10px;
+  }
+
+  .shop-sidebar {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .site-logo {
+    text-align: center;
+  }
+
+  .site-logo a img {
+    height: 28px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .navbar-toggler {
+    padding: 8px 10px;
+  }
+
+  .top-header .col-1 {
+    display: none !important;
+  }
+
+  .navbar.navbar-expand-lg.nav-menu {
+    display: block;
+  }
+
+  .top-right-nav {
+    padding: 0 !important;
+  }
+
+  .bottom-header .text-btn {
+    display: none;
+  }
+
+  .footer-widget {
+    margin-top: 25px;
+  }
+
+  .social-link {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    text-align: center !important;
+  }
+
+  .footer-bottom .text-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-section .col-6 {
+    width: 100%;
+  } 
+}
